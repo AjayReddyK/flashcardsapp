@@ -12,8 +12,8 @@ def load_config():
     app.config.update(dict(
         DATABASE=os.path.join(app.root_path, pathDB, nameDB),
         SECRET_KEY='development key',
-        USERNAME='admin',
-        PASSWORD='default'
+        USERNAME='ajay',
+        PASSWORD='police'
     ))
     app.config.from_envvar('CARDS_SETTINGS', silent=True)
 
