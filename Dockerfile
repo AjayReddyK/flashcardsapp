@@ -1,16 +1,7 @@
-FROM python:3.9
-LABEL maintainer="Tinpee <tinpee.dev@gmail.com>"
-
-ADD . /src
-WORKDIR /src
-RUN pip install --upgrade pip \
-    && pip install flask gunicorn
-
-COPY entrypoint.sh /
-RUN sed -i 's/\r$//' /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-
-VOLUME /src/db
-
-EXPOSE 8000
-CMD ["/entrypoint.sh"]
+heroku login
+heroku container:login
+heroku create
+# Creating app... done, ⬢ your-app-name
+heroku container:push web --app computer-science-flash-cards-main
+heroku container:release web --app computer-science-flash-cards-main
+heroku open --app computer-science-flash-cards-main

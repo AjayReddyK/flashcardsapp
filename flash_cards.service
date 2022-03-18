@@ -5,10 +5,10 @@ After=network.target
 [Service]
 User=anton
 Group=www-data
-WorkingDirectory=/home/anton/Desktop/computer-science-flash-cards
-Environment="PATH=/home/anton/Desktop/computer-science-flash-cards/myproject/bin"
-Environment="CARDS_SETTINGS=/home/anton/Desktop/computer-science-flash-cards/config-personal.txt"
-ExecStart=/home/anton/Desktop/computer-science-flash-cards/myproject/bin/uwsgi --ini flash_cards.ini
+WorkingDirectory=/home/anton/Desktop/computer-science-flash-cards-main
+Environment="PATH=/home/anton/Desktop/computer-science-flash-cards-main/myproject/bin"
+Environment="CARDS_SETTINGS=/home/anton/Desktop/computer-science-flash-cards-main/config-personal.txt"
+ExecStart=/home/anton/Desktop/computer-science-flash-cards-main/myproject/bin/uwsgi --ini flash_cards.ini
 
 [Install]
 WantedBy=multi-user.target
