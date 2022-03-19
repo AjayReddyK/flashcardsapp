@@ -10,7 +10,7 @@ pathDB='db'
 
 def load_config():
     app.config.update(dict(
-        DATABASE=os.path.join(app.root_path),
+        DATABASE='postgres://skfeyedwskfcxn:e334e83faa7f3c1caa038abf1dc593b0f04064e8b1289a2a6ba093ca33f94862@ec2-3-212-45-192.compute-1.amazonaws.com:5432/d98a8s62vq29bn',
         SECRET_KEY='development key',
         USERNAME='ajay',
         PASSWORD='police'
