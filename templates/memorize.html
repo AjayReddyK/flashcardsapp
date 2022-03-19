@@ -43,7 +43,7 @@
                                 {% if short_answer %}
                                     <div class="text-center largerText">
                                 {% endif %}
-                                    {{ card.back|replace("\n", "<br />")|safe }}
+                                    <pre><code>{{ card.back|replace("\n", "<br />")|safe }}</code></pre>
                                 {% if short_answer %}
                                     </div>
                                 {% endif %}

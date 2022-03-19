@@ -5,7 +5,7 @@ from flask import Flask, request, session, g, redirect, url_for, abort, \
 
 app = Flask(__name__)
 app.config.from_object(__name__)
-nameDB='cards.db'
+nameDB='ajay.db'
 pathDB='db'
 
 def load_config():
@@ -175,7 +175,9 @@ def delete(card_id):
 @app.route('/memorize/<card_type>/<card_id>')
 def memorize(card_type, card_id=None):
     tag = getTag(card_type)
+    print(tag)
     if tag is None:
+        print("tag is none block")
         return redirect(url_for('cards'))
 
     if card_id:
@@ -362,8 +364,7 @@ def init_tag():
 def show():
     if not session.get('logged_in'):
         return redirect(url_for('login'))
-    tags = getAllTag()
-    return render_template('show.html', tags=tags, filter_name="")
+    return redirect(url_for('filter_cards', filter_name="all"))
 
 def getTag(tag_id):
     if not session.get('logged_in'):
