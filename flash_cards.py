@@ -10,7 +10,7 @@ pathDB='db'
 
 def load_config():
     app.config.update(dict(
-        DATABASE=os.path.join(app.root_path, pathDB, nameDB),
+        DATABASE=os.path.join(app.root_path),
         SECRET_KEY='development key',
         USERNAME='ajay',
         PASSWORD='police'
