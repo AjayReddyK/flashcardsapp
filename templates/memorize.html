@@ -26,7 +26,7 @@
             </div>
         </div>
         -->
-        <div class="col-xs-8 col-xs-offset-2" >
+        <div class="col-xs-12"  >
             <div class="panel panel-default cardFront">
                 <div class="panel-body">
                     <div class="alignContainer">
@@ -37,7 +37,7 @@
                 </div>
             </div>
             <div class="panel panel-primary cardBack" >
-                        <div class="cardContent"  >
+                        <div class=""  >
                             {% if card.type == 1 %}
                                 {% if short_answer %}
                                     <div class="text-center largerText">
@@ -47,8 +47,10 @@
                                     </div>
                                 {% endif %}
                             {% else %}
-                                <code>{{ card.back|escape }}</code>
-                            {% endif %}
+                            <div style="overflow: scroll;">
+                                <pre ><code style="white-space: inherit;">{{ card.back|safe }}</code></pre>
+                            </div>
+                                {% endif %}
                         </div>
             </div>
         </div>

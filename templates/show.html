@@ -27,9 +27,9 @@
                     {{ card.front }}
                 </h4>
                 {% if card.type == 1 %}
-                    <pre><code>{{ card.back|replace("\n", "<br />")|safe }}</code></pre>
+                    <pre><code style="white-space: inherit;">{{ card.back|replace("\n", "<br />")|safe }}</code></pre>
                 {% else %}
-                    <pre><code>{{ card.back|escape }}</code></pre>
+                    <pre><code style="white-space: inherit;">{{ card.back|escape }}</code></pre>
                 {% endif %}
             </td>
         </tr>

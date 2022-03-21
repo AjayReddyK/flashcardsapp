@@ -2,16 +2,18 @@
     background-color: #62b06b;
     color: #ffffff;
 }
-
+pre code{
+  white-space: inherit;
+}
 textarea {
     font-family: monospace;
 }
 
-.cardContent .tagContent h4 {
+/* .cardContent .tagContent h4 {
     margin-top: 0;
-    overflow-x:scroll;
+    overflow:scroll;
   white-space:nowrap;
-}
+} */
 
 .alignContainer {
     display: table;
