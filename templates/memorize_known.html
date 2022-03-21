@@ -26,9 +26,7 @@
                 </div>
             </div>
             <div class="panel panel-primary cardBack">
-                <div class="panel-body">
-                    <div class="alignContainer">
-                        <div class="alignMiddle frontText">
+                <div class="">
                             {% if card.type == 1 %}
                                 {% if short_answer %}
                                     <div class="text-center largerText">
@@ -40,8 +38,6 @@
                             {% else %}
                                 <pre><code style="white-space: inherit;">{{ card.back|escape }}</code></pre>
                             {% endif %}
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
