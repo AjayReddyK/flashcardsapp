@@ -33,6 +33,7 @@ Werkzeug = "==0.15.5"
 gunicorn = "*"
 flask = "*"
 flask-sqlalchemy = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
