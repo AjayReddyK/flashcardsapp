@@ -6,7 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 from  sqlalchemy.sql.expression import func, select
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///test.db'
+app.config['SQLALCHEMY_DATABASE_URI']='postgres://skfeyedwskfcxn:e334e83faa7f3c1caa038abf1dc593b0f04064e8b1289a2a6ba093ca33f94862@ec2-3-212-45-192.compute-1.amazonaws.com:5432/d98a8s62vq29bn'
 app.config['USERNAME']="ajay"
 app.config['PASSWORD']='ajay45177'
 app.config['SECRET_KEY']='development key'
