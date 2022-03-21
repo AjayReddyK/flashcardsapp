@@ -299,9 +299,9 @@ def get_card(types):
 
     cur = db.execute(query, [type])'''
     if(types=='all'):
-        cur=Cards.query.filter(Cards.known==0).order_by(func.random()).first()
+        cur=Cards.query.filter(Cards.known==False).order_by(func.random()).first()
         return cur
-    cur=Cards.query.filter(Cards.type==types,Cards.known==0).order_by(func.random()).first()
+    cur=Cards.query.filter(Cards.type==types,Cards.known==False).order_by(func.random()).first()
     return cur
 
 
