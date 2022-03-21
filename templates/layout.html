@@ -26,13 +26,11 @@
                                 <li><a href="{{ url_for('cards') }}">cards</a></li>
                                 <li><a href="{{ url_for('tags') }}">tags</a></li>
                                 <li><a href="{{ url_for('show') }}">show</a></li>
-                                <li><a href="{{ url_for('list_db') }}">list database</a></li>
-                                <li><a href="{{ url_for('create_db') }}">create database</a></li>
-                                <li><a href="{{ url_for('memorize', card_type='1') }}">memorize</a></li>
-                                <li><a href="{{ url_for('memorize_known', card_type='1') }}">memorize known items</a></li>
-                                <li><form action="{{ url_for('search') }}" method="post">
-                                        <input type="text" name="searching" class="form-control">
-                                        <button type="submit" class="btn btn-lg btn-primary">Go</button>
+                                <li><a href="{{ url_for('memorize', card_type='all') }}">memorize</a></li>
+                                <li><a href="{{ url_for('memorize_known', card_type='all') }}">memorize known items</a></li>
+                                <form action="{{ url_for('search') }}" method="post">
+                                     <li>   <input type="text" name="searching" class="form-control"></li>
+                                      <li>  <button type="submit" class="btn btn-lg btn-primary">Go</button></li>
                                     </form>
                                 <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
                                 <li><a href="{{ url_for('logout') }}">log out</a></li>

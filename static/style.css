@@ -9,11 +9,14 @@ textarea {
 
 .cardContent .tagContent h4 {
     margin-top: 0;
+    overflow-x:scroll;
+  white-space:nowrap;
 }
 
 .alignContainer {
     display: table;
     width: 100%;
+    
 }
 
 .alignMiddle {

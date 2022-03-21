@@ -32,6 +32,7 @@ virtualenv = "==15.1.0"
 Werkzeug = "==0.15.5"
 gunicorn = "*"
 flask = "*"
+flask-sqlalchemy = "*"
 
 [dev-packages]
 

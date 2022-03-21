@@ -4,6 +4,7 @@
     <div class="row">
         <div class="col-xs-12 text-center">
             <div class="btn-group btn-group-lg" role="group" aria-label="card type">
+                <a href="{{ url_for('memorize_known', card_type='all') }}" class="btn btn-{{ "primary" if card_type == "all" else "default" }}">all</a>
                 {% for tag in tags %}
                     <a href="{{ url_for('memorize_known', card_type=tag.id) }}" class="btn btn-{{ "primary" if card_type == tag.id else "default" }}">{{tag.tagName}}</a>
                 {% endfor %}
